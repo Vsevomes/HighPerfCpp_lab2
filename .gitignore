@@ -1,2 +1,6 @@
 /build
 /.vscode
+/data
+*/venv
+*benchmark_results.csv
+*.png
