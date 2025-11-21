@@ -4,11 +4,9 @@ project(SIMDProject)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mavx2 -march=native")
 
-# Проверяем, установлен ли Google Benchmark
 find_package(benchmark QUIET)
 
 if(NOT benchmark_FOUND)
-    # Добавляем Google Benchmark через FetchContent
     include(FetchContent)
     FetchContent_Declare(
       benchmark
@@ -18,7 +16,6 @@ if(NOT benchmark_FOUND)
     FetchContent_MakeAvailable(benchmark)
 endif()
 
-# Наши исходники
 set(SOURCES
     main.cpp
     src/substring_search.cpp
