@@ -26,7 +26,7 @@ project/
 mkdir build
 cd build
 cmake ..
--j$(nproc)
+make -j$(nproc)
 ```
 
 ## Execute project
@@ -46,4 +46,4 @@ python3 plots.py
 deactivate
 ```
 
-Results will appear in plot directory
+Results will be appear in plot directory
